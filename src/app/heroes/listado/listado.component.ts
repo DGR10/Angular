@@ -18,8 +18,10 @@ export class ListadoComponent implements OnInit {
   }
 
   borrarHeroe() {
-    const heroeBorrado:string = this.heroes.pop() || '';
-    this.heroesBorrados.push(heroeBorrado);
+    const heroeBorrado:string = this.heroes.shift() || '';
+    if (heroeBorrado != '') {
+      this.heroesBorrados.push(heroeBorrado);
+    }
   }
 
 }
