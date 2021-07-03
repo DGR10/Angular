@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
         <h1>{{titulo}}</h1>
         <h3>La base es: <strong> {{base}} </strong></h3>
 
-        <button (click)="acumular(base)"> + {{base}} </button>
-
-        <span>{{contador}}</span>
-
         <button (click)="acumular(-base)"> - {{base}} </button>
+        
+        <span>{{contador}}</span>
+        
+        <button (click)="acumular(base)"> + {{base}} </button>
     `
 })
 
