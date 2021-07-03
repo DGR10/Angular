@@ -6,12 +6,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoComponent implements OnInit {
 
+  public heroes: string[] = ['Ironman', 'Spiderman', 'Thor', 'Hulk'];
+  public heroesBorrados: string[] = [];
+
   constructor() {
     console.log('constructor');
   }
   
   ngOnInit(): void {
     console.log('ngOnInit');
+  }
+
+  borrarHeroe() {
+    const heroeBorrado:string = this.heroes.pop() || '';
+    this.heroesBorrados.push(heroeBorrado);
   }
 
 }
